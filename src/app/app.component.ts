@@ -12,20 +12,31 @@ import {GeneralService} from './general.service';
 
 
 export class AppComponent {
-  title = 'Qr-code';
-  url : string ='';
+  qrcodename : string;
+  title = 'generate-qrcode';
+  elementType: 'url' | 'canvas' | 'img' = 'url';
+  value: string;
+  display = false;
+  href : string;
   
 
-constructor(private service : GeneralService){
-   this.url = 'http://goggle.com';
+constructor(private service : GeneralService){}
 
-
+generateQRCode(){
+  if(this.qrcodename == ''){
+    this.display = false;
+    alert("Please enter the name");
+    return;
+  }
+  else{
+    this.value = this.qrcodename;
+    this.display = true;
+  }
 }
 
-
-
-
-
+downloadImage(){
+this.href = document.getElementsByTagName('img')[0].src;
+}
 
 
 

@@ -1,4 +1,15 @@
-img {
-    margin-right: auto;
-    margin-left: auto;
-}
+button {    
+    padding: 10px;    
+    background-color: gray;    
+    margin-top: 10px;    
+}    
+input {    
+    padding: 10px;    
+    width: 15%;    
+}    
+a {    
+    padding: 10px;    
+    background-color: skyblue;    
+    margin-top: 10px;    
+    text-decoration: none;    
+}    
